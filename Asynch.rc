@@ -1,0 +1,398 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\Asynch.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Asynch.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About Asynch"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Asynch Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_ASYNCH_DIALOG DIALOGEX 0, 0, 406, 356
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Asynch"
+MENU IDR_MENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Data",IDC_STATIC,17,14,293,59
+    LTEXT           "File&name",IDC_STATIC,27,29,29,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_FILENAME,66,29,206,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,277,29,22,14
+    PUSHBUTTON      "&Create Data",IDC_CREATEDATA,66,50,50,14
+    GROUPBOX        "Async",IDC_STATIC,17,76,383,88
+    LTEXT           "&Async Requests",IDC_REQUESTS_CAPTION_1,25,90,52,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_NREQUESTS,85,90,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_REQUESTS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,113,90,
+                    10,14
+    LTEXT           "× 100",IDC_REQUESTS_CAPTION_2,125,90,28,14,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "&Generate",IDC_GENERATE,171,90,50,14
+    PUSHBUTTON      "&Run",IDC_RUN,172,108,50,14
+    CONTROL         "&Show Progress Bars (distorts measurment slightly)",
+                    IDC_SHOW_PROGRESS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    29,126,210,10
+    CONTROL         "",IDC_CREATE_PROGRESS,"msctls_progress32",WS_BORDER | 
+                    0x1,25,141,218,11
+    CONTROL         "",IDC_RESPONSE_PROGRESS,"msctls_progress32",WS_BORDER | 
+                    0x1,25,150,218,11
+    GROUPBOX        "dwFlagsAndAttributes",IDC_STATIC,250,80,145,79
+    GROUPBOX        "Scan suggestions",IDC_STATIC,257,88,130,46
+    CONTROL         "&None",IDC_FILE_FLAG_SUGGESTION_NONE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,263,99,33,10
+    CONTROL         "FILE_FLAG_SE&QUENTIAL_SCAN",
+                    IDC_FILE_FLAG_SEQUENTIAL_SCAN,"Button",
+                    BS_AUTORADIOBUTTON,263,110,118,10
+    CONTROL         "FILE_FLAG_RAN&DOM_ACCESS",IDC_FILE_FLAG_RANDOM_ACCESS,
+                    "Button",BS_AUTORADIOBUTTON,263,121,114,10
+    CONTROL         "FILE_FLAG_&WRITE_THROUGH",IDC_FILE_FLAG_WRITE_THROUGH,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,263,136,
+                    113,10
+    CONTROL         "FILE_FLAG_NO_&BUFFERING",IDC_FILE_FLAG_NO_BUFFERING,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,263,147,106,10
+    LISTBOX         IDC_LOG,0,168,406,45,LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Rece&ived (x) to Sent (y) scatter plot",IDC_SCATTER,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,87,
+                    218,132,10
+    CONTROL         "&Processing time plot",IDC_TEMPORAL,"Button",
+                    BS_AUTORADIOBUTTON,239,218,79,10
+    LTEXT           "X",IDC_X_CAPTION,15,233,391,12
+    LTEXT           "Plot area",IDC_PLOT,18,246,387,110,SS_NOTIFY | 
+                    WS_BORDER
+    CONTROL         "",IDC_Y_CAPTION,"Static",SS_BLACKFRAME | SS_NOPREFIX,3,
+                    247,13,109
+    CONTROL         "",IDC_FRAME,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,0,0,
+                    405,288
+END
+
+IDD_CREATE_DATA DIALOGEX 0, 0, 186, 102
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Create Data"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "# of &Records",IDC_STATIC,11,39,43,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_RECORDS,60,39,28,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_RECORDS,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,89,39,11,14
+    LTEXT           "× 1000",IDC_STATIC,104,39,45,14,SS_CENTERIMAGE
+    PUSHBUTTON      "&Create Data",IDC_CREATE_DATA,7,63,50,14
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER | 0x1,3,91,
+                    181,10
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+END
+
+IDD_DATA DIALOGEX 0, 0, 90, 348
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_DATA,0,0,90,348,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Asynch.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "Asynch.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_ASYNCH_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 399
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 349
+    END
+
+    IDD_CREATE_DATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_DATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 83
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 341
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open plot",                  ID_FILE_OPEN_PLOT
+        MENUITEM "&Save Plot...\tCtrl+S",       ID_FILE_SAVE_PLOT
+        MENUITEM "Save Plot &As...",            ID_FILE_SAVE_PLOT_AS
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Clear &Data samples",         ID_EDIT_CLEAR
+        MENUITEM "Clear &Log",                  ID_EDIT_CLEARLOG
+        MENUITEM "&Copy Graph Image\tCtrl+C",   ID_EDIT_COPY
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR1 ACCELERATORS 
+BEGIN
+    "S",            ID_FILE_SAVE_PLOT,      VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_COPY,                VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Asynch..."
+    IDS_PROGRAM_ROOT        "Software\\HOTT\\asynchDemo"
+    IDS_REGISTRY_DATABASE   "Database"
+    IDS_DATABASE_FILTER     "Test database (*,dat)|*.dat|All files (*.*)|*.*|"
+    IDS_UNKNOWN_ERROR       "Unknown error %d (0x%08x)"
+    IDS_PLOT_FILTER         "Plot (*.plt)|*.plt|Comma-separated list (.csv)|*.csv|All files (*.*)|*.*|"
+    IDS_DELETED_ENTRIES     "======================== Deleted %d entries ========================"
+    IDS_LOG_FILTER          "Log files (*.log)|*.log|All files (*.*)|*.*||"
+    IDS_FILE_SAVE           "Save log file"
+    IDS_FILE_SAVE_AS        "Save log file as"
+    IDS_FILE_OPEN_FAILED    "File open failed"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FILE_CLOSED         "Input file closed"
+    IDS_HEADER_WRONG_SIZE   "Header read error; read %d bytes expected, %d bytes"
+    IDS_NRECS               "File contains %d records"
+    IDS_COMPLETION_ERROR    "Error notification on completion port"
+    IDS_COMPLETION_FAILED   "Failed to create I/O Completion Port"
+    IDS_HEADER_READ_FAILED  "Read of header failed"
+    IDS_QUEUED_READ_FAILED  "Queued ReadFile (%d) failed for record #%d"
+    IDS_TOTAL_QUEUED_FAILURSE "Failed to execute %d queued reads"
+    IDS_ENDING_REQUESTS     "Generated %d ReadFile operations"
+    IDS_STARTING_REQUESTS   "Starting ReadFile sequence"
+    IDS_HEADER_ALLOC_FAILED "Header allocation failure"
+    IDS_EARLY               "Early"
+    IDS_LATE                " Late"
+    IDS_TIMESTATS           "Max time %s\nMin time %s\nAverage time %s ±%s"
+    IDS_X_LABEL_SCATTER     "Received sequence --->"
+    IDS_X_LABEL_TIME        "Sent sequence --->"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_GENERATE            "Generate a sequence of random seek addresses"
+    IDC_FILE_FLAG_NO_BUFFERING "Does not use the file system cache"
+    IDC_SHOWPROGRESS        "Show progress bars during computations"
+    IDC_FILE_FLAG_SUGGESTION_NONE 
+                            "No suggestions as to how the file will be accessed"
+    IDC_FILE_FLAG_SEQUENTIAL_SCAN 
+                            "Suggests that the file will be read from beginning to end"
+    IDC_FILE_FLAG_RANDOM_ACCESS "Suggests that the file will be read randomly"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_SCATTER             "Plot a graph of received sequence (x) vs. sent sequence (y)"
+    IDC_TEMPORAL            "Plot a graph of sent sequence (x) vs. processing time (y)"
+    IDC_RUN                 "Run a sequence of asynchronous ReadFiles on the current set of addresses"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_BROWSE              "Browse for an input data file"
+    IDC_CREATEDATA          "Create a data file to run the tests"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REGISTRY_SAMPLES    "Samples"
+    IDS_REGISTRY_FILE_FLAG_NO_BUFFERING "FILE_FLAG_NO_BUFFERING"
+    IDS_REGISTRY_FILE_FLAG_WRITE_THROUGH "FILE_FLAG_WRITE_THROUGH"
+    IDS_STARTING_GENERATION "Starting generation of random seek addresses"
+    IDS_ENDING_GENERATION   "Generated %d random seek addresses"
+    IDS_Y_LABEL_SCATTER     "Sent sequence--->"
+    IDS_Y_LABEL_TIME        "Processing time --->"
+    IDS_SCATTER_STATS       "Seek offset %d\nIssued at T=%d\nReceived at T=%d"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\Asynch.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
